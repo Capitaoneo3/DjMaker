@@ -1,0 +1,10 @@
+#mesa {
+    padding: 0%;
+    background-color: black;
+    width: 500px;
+    height: inherit;
+    z-index: 3;
+}
+#labelRow1Bateria{
+    color: yellow;
+}

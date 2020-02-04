@@ -1,0 +1,62 @@
+
+
+    html{
+        -webkit-background-size: cover; /* SAFARI / CHROME */
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      
+        background-size: 100% 100%;
+        background: no-repeat;
+        background-image: radial-gradient(rgba(63, 63, 51,1.9) 15%, rgba(0, 0, 0,1.5) 90%);
+    }
+    .instrumentos {
+        width: 100%;
+        margin-top: 100px;
+    }
+    .caixaPreta {
+        background: rgba(0, 0, 0, 0.5);
+    }
+    
+   
+    /*
+    .colum {
+        display: flex;
+        flex-direction: column;
+    }*/
+    /*.row{
+        display: flex;
+        flex-direction: row;
+    }*/
+    
+    audio {
+        width: calc(44% - 20px);
+        z-index: 10;
+    }
+    input[type=range][orient=vertical]
+    {
+        writing-mode: bt-lr; /* IE */
+        -webkit-appearance: slider-vertical; /* WebKit */
+        width: 8px;
+        height: 95px;
+        padding: 0 5px;
+        cursor: pointer;
+    }
+    .cursorDefault{
+        cursor: default;
+    }
+    button{
+        cursor: pointer;
+    }
+    input[type="file"] { 
+    display: none; 
+    }
+    
+    .label-bordered {
+        border: 1px solid #cecece;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    
+
+

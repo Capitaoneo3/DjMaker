@@ -1,0 +1,73 @@
+
+.piano {
+    background-color: black;
+    width: 360px;
+    z-index: 3;
+    display: flex;
+    position: relative;
+    margin-left: 4px;
+    margin-bottom:20px;
+
+
+
+    
+}
+
+
+.white-key {
+    width: 40px;
+    height: 120px;
+    background-color: #FFF;
+    border: 4px solid black;
+    border-radius: 0 0 6px 6px;
+    margin-left: -4px;
+    outline: none;
+    cursor: unset;
+}
+
+.white-key.active {
+    background-color: #C0C0C0;
+}
+
+.black-key {
+    position: absolute;
+    width: 24px;
+    height: 80px;
+    background-image: linear-gradient(#000000, #303030);
+    border: 3px solid black;
+    border-radius: 0 0 2px 2px;
+    outline: none;
+    cursor: unset;
+}
+
+.black-key.active {
+    background-image: linear-gradient(#000000, #101010);
+}
+
+.Db4-key {
+    left: 22px;
+}
+
+.Eb4-key {
+    left: 58px;
+}
+
+.Gb4-key {
+    left: 130px;
+}
+
+.Ab4-key {
+    left: 166px;
+}
+
+.Bb4-key {
+    left: 202px;
+}
+
+.Db5-key {
+    left: 274px;
+}
+
+.Eb5-key {
+    left: 310px;
+}

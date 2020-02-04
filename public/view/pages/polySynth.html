@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <script>
+   $('#MudarTeclado').click(function () {
+
+let paginas=['fmSynth.html', 'polySynth.html'];
+let scripts = ['../../javascript/FmSynth.js','../../javascript/polySynth.js'];
+
+
+$.ajax({
+  url: ''+paginas[0]+'',
+  success: function (data) {
+
+  
+    $('#demo').html(data);
+  },
+  beforeSend: function () {
+
+  },
+  complete: function () {
+    $.getScript( ''+scripts[0]+'');
+    
+  }
+});
+
+});
+    </script>
+ </script>
+
+</head>
+
+<body>
+
+  <div class="caixaPreta row">
+    <div class="piano mr-4 ml-5">
+      <button class="white-key C4-key"></button>
+      <button class="black-key Db4-key"></button>
+      <button class="white-key D4-key"></button>
+      <button class="black-key Eb4-key"></button>
+      <button class="white-key E4-key"></button>
+      <button class="white-key F4-key"></button>
+      <button class="black-key Gb4-key"></button>
+      <button class="white-key G4-key"></button>
+      <button class="black-key Ab4-key"></button>
+      <button class="white-key A4-key"></button>
+      <button class="black-key Bb4-key"></button>
+      <button class="white-key B4-key"></button>
+      <button class="white-key C5-key"></button>
+      <button class="black-key Db5-key"></button>
+      <button class="white-key D5-key"></button>
+      <button class="black-key Eb5-key"></button>
+      <button class="white-key E5-key"></button>
+    </div>
+    <a id="MudarTeclado"><button class="btn btn-dark  mr-5 ">Mudar <br>Teclado</button></a>
+    <div class="row">
+
+      <div class=" border border-secondary mr-4">
+        <input  onclick="setVolume()"class="ml-2" id="VolPianoControl" type="range" orient="vertical" min="-30" max="20" step="5" /><br>
+        <div class="cursorDefault badge badge-pill badge-danger" style="font-style: oblique;">vol</div>
+      </div>
+      <div class=" border border-secondary mr-4">
+        <input class="ml-3" id="tomCtrl" type="range" orient="vertical" min="1" max="6" step="1" /><br>
+        <div class="cursorDefault badge badge-pill badge-danger" style="font-style: oblique;">tomCtrl</div>
+      </div>
+      <div class=" border border-secondary mr-4">
+        <input onclick="setpartialCount()"class="ml-3" id="partialCont" type="range" orient="vertical" min="1" max="6" step="1" /><br>
+        <div class="cursorDefault badge badge-pill badge-danger" style="font-style: oblique;">partial<br>Cont</div>
+      </div>
+
+      <div class="float-sm-left ">
+        <div class="btn-group dropright">
+          <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            ocilador
+          </button>
+          <button type="button" class="btn btn-dark ml-5" onclick="nextTeclado()">
+            TrocarVoz
+          </button>
+          <div class="dropdown-menu">
+            <button class="dropdown-item" onclick="setOciladorTipo('sawtooth')">Sawtooth</button>
+            <button class="dropdown-item" onclick="setOciladorTipo('square')">Square</button>
+            <button class="dropdown-item" onclick="setOciladorTipo('triangle')">Triangle</button>
+            <button class="dropdown-item" onclick="setOciladorTipo('sine')">Sine</button>
+          </div>
+        </div>
+        <br>
+        <div class="mt-4 mr-4 border border-secondary float-sm-left rounded "
+          style="background-color:rgb(190, 49, 49);visibility: hidden;">
+          <span style="margin-left: 35%;margin-right: auto; color: beige;cursor: default;font-style: oblique;">looping
+          </span>
+          <br>
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-secondary active">
+              <input type="radio" name="options" id="option1" autocomplete="off" checked> REC
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="options" id="option2" autocomplete="off"> RESET
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="options" id="option3Loop" autocomplete="off"> Play/Pause
+            </label>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
