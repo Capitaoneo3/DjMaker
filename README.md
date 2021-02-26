@@ -27,7 +27,7 @@ Make music on the web with some keyboard-based instruments.
 
 ## Features
 [//]: # (Add the features of your project here:)
-This app features all the latest tools and practices in mobile development!
+
 
 - ⚛️ **Tonejs** — Tone.js is a Web Audio framework for creating interactive music in the browser. The architecture of Tone.js aims to be familiar to both musicians and audio programmers creating web-based audio applications.
 - ⚛️ **API Audio web** — The web audio API provides a powerful and versatile audio control system for the web, allowing developers to choose audio files, add effects to these files, create audio players, apply spatial effects (like panning) and much more.
