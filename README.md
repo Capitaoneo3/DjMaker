@@ -7,7 +7,7 @@
 DjMaker
 </h1>
 
-<p align="center">Descrição</p>
+<p align="center">Description</p>
 
 Make music on the web with some keyboard-based instruments.
 
